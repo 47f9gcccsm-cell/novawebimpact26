@@ -1,0 +1,1589 @@
+
+/* ==========================================
+   Nova Web Impact - FEUILLE DE STYLE PRINCIPALE
+   ========================================== */
+
+/* 1. VARIABLES ET CONFIGURATION */
+
+:root {
+    --primary: #071c16;
+    --secondary: #103629;
+    --green: #19c37d;
+    --green-dark: #087b50;
+    --green-light: #e5f8ee;
+    --white: #ffffff;
+    --light: #f5f8f6;
+    --dark: #17231e;
+    --gray: #68756e;
+    --border: #e2eae4;
+    --shadow: 0 15px 40px rgba(7, 28, 22, 0.08);
+    --radius: 12px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 90px;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--dark);
+    background: var(--white);
+    line-height: 1.7;
+    overflow-wrap: break-word;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+button,
+input,
+select,
+textarea {
+    font: inherit;
+}
+
+button {
+    cursor: pointer;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+ul {
+    list-style-position: inside;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.section-padding {
+    padding: 100px 0;
+}
+
+:focus-visible {
+    outline: 3px solid var(--green);
+    outline-offset: 4px;
+}
+
+
+/* ==========================================
+   2. NAVIGATION
+   ========================================== */
+
+.header {
+    background: var(--primary);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    padding: 19px 0;
+    box-shadow: 0 3px 20px rgba(0,0,0,0.1);
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 25px;
+}
+
+.logo {
+    color: var(--white);
+    font-size: 25px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    white-space: nowrap;
+}
+
+.logo span {
+    color: var(--green);
+}
+
+.nav-menu {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.nav-menu a {
+    color: #d7e4dc;
+    font-size: 14px;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.nav-menu a:hover,
+.nav-menu a.active {
+    color: var(--green);
+}
+
+.nav-menu .nav-contact {
+    background: var(--green);
+    color: var(--primary);
+    padding: 11px 23px;
+    border-radius: 6px;
+    font-weight: 700;
+    transition: 0.3s;
+}
+
+.nav-menu .nav-contact:hover,
+.nav-menu .nav-contact.active {
+    background: var(--white);
+    color: var(--primary);
+}
+
+.menu-toggle {
+    display: none;
+    background: transparent;
+    border: none;
+    color: var(--white);
+    font-size: 29px;
+    line-height: 1;
+}
+
+
+/* ==========================================
+   3. BOUTONS
+   ========================================== */
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 8px;
+    padding: 14px 25px;
+    border-radius: 6px;
+    font-weight: 700;
+    font-size: 14px;
+    border: 2px solid transparent;
+    transition: background 0.3s,
+                color 0.3s,
+                transform 0.3s;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+}
+
+.btn-primary {
+    background: var(--green);
+    color: var(--primary);
+}
+
+.btn-primary:hover {
+    background: #10a86b;
+    color: var(--white);
+}
+
+.btn-secondary {
+    border-color: #9bb3a4;
+    color: var(--white);
+    background: transparent;
+}
+
+.btn-secondary:hover {
+    background: var(--white);
+    color: var(--primary);
+}
+
+.btn-outline {
+    border-color: var(--green-dark);
+    color: var(--green-dark);
+    background: transparent;
+}
+
+.btn-outline:hover {
+    background: var(--green-dark);
+    color: var(--white);
+}
+
+
+/* ==========================================
+   4. TITRES ET SECTIONS
+   ========================================== */
+
+.section-subtitle {
+    color: var(--green-dark);
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 17px;
+}
+
+.section-heading {
+    max-width: 700px;
+    text-align: center;
+    margin: 0 auto 55px;
+}
+
+.section-heading h2 {
+    color: var(--primary);
+    font-size: clamp(30px, 4vw, 42px);
+    line-height: 1.25;
+    margin-bottom: 17px;
+}
+
+.section-heading > p:last-child {
+    color: var(--gray);
+    font-size: 16px;
+}
+
+
+/* ==========================================
+   5. ACCUEIL - HERO
+   ========================================== */
+
+.hero {
+    background:
+        radial-gradient(
+            circle at 80% 30%,
+            #174c39 0%,
+            transparent 38%
+        ),
+        linear-gradient(120deg, #071c16, #0b2b20);
+    color: var(--white);
+    min-height: 630px;
+    padding: 110px 0;
+    display: flex;
+    align-items: center;
+}
+
+.hero-content {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    align-items: center;
+    gap: 65px;
+}
+
+.hero-subtitle {
+    color: var(--green);
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+}
+
+.hero h1 {
+    font-size: clamp(38px, 5vw, 62px);
+    line-height: 1.14;
+    margin-bottom: 25px;
+}
+
+.hero h1 span {
+    color: var(--green);
+}
+
+.hero-description {
+    color: #c4d5ca;
+    max-width: 560px;
+    margin-bottom: 35px;
+}
+
+.hero-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.hero-visual {
+    display: flex;
+    justify-content: center;
+}
+
+.visual-card {
+    width: 100%;
+    max-width: 410px;
+    min-height: 350px;
+    padding: 40px;
+    border-radius: 16px;
+    border: 1px solid #426554;
+    background: linear-gradient(145deg, #164331, #0b251b);
+    box-shadow: 0 25px 60px rgba(0,0,0,0.25);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.visual-label {
+    color: var(--green);
+    font-size: 13px;
+    font-weight: 800;
+    letter-spacing: 3px;
+    margin-bottom: 30px;
+}
+
+.visual-card h2 {
+    font-size: 29px;
+    line-height: 1.35;
+    color: var(--white);
+}
+
+.visual-line {
+    width: 65px;
+    height: 4px;
+    background: var(--green);
+    margin: 28px 0 20px;
+}
+
+.visual-card p {
+    color: #c4d5ca;
+    font-size: 13px;
+}
+
+
+/* ==========================================
+   6. ACCUEIL - PRÉSENTATION
+   ========================================== */
+
+.about-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+}
+
+.about h2 {
+    font-size: clamp(30px, 4vw, 43px);
+    color: var(--primary);
+    line-height: 1.25;
+}
+
+.about h2 span {
+    color: var(--green-dark);
+}
+
+.about-text p {
+    color: var(--gray);
+    margin-bottom: 20px;
+}
+
+.text-link {
+    display: inline-block;
+    color: var(--green-dark);
+    font-weight: 700;
+    margin-top: 10px;
+}
+
+.text-link:hover {
+    color: var(--primary);
+    text-decoration: underline;
+}
+
+
+/* ==========================================
+   7. ACCUEIL - SERVICES
+   ========================================== */
+
+.services {
+    background: var(--light);
+}
+
+.service-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 25px;
+}
+
+.service-card {
+    background: var(--white);
+    padding: 35px;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    transition: transform 0.3s,
+                box-shadow 0.3s;
+}
+
+.service-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow);
+}
+
+.service-number {
+    color: var(--green-dark);
+    font-size: 19px;
+    font-weight: 800;
+    margin-bottom: 25px;
+}
+
+.service-card h3 {
+    color: var(--primary);
+    font-size: 21px;
+    margin-bottom: 15px;
+}
+
+.service-card p {
+    color: var(--gray);
+    font-size: 14px;
+    margin-bottom: 25px;
+}
+
+.service-card a {
+    color: var(--green-dark);
+    font-weight: 700;
+    font-size: 14px;
+}
+
+.service-card a:hover {
+    text-decoration: underline;
+}
+
+
+/* ==========================================
+   8. AVANTAGES COMMUNS
+   ========================================== */
+
+.advantages-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 30px;
+}
+
+.advantage {
+    background: var(--light);
+    padding: 30px;
+    border-left: 4px solid var(--green);
+    border-radius: 0 10px 10px 0;
+}
+
+.advantage h3 {
+    color: var(--primary);
+    font-size: 20px;
+    margin-bottom: 12px;
+}
+
+.advantage p {
+    color: var(--gray);
+    font-size: 14px;
+}
+
+
+/* ==========================================
+   9. EN-TÊTE DES PAGES INTERNES
+   ========================================== */
+
+.page-hero {
+    background:
+        radial-gradient(
+            circle at 85% 20%,
+            #1b533e 0%,
+            transparent 35%
+        ),
+        linear-gradient(120deg, #071c16, #103629);
+    color: var(--white);
+    padding: 100px 0;
+    text-align: center;
+}
+
+.page-hero .container {
+    max-width: 850px;
+}
+
+.page-hero .section-subtitle {
+    color: var(--green);
+}
+
+.page-hero h1 {
+    font-size: clamp(36px, 5vw, 58px);
+    line-height: 1.2;
+    margin-bottom: 25px;
+}
+
+.page-hero h1 span {
+    color: var(--green);
+}
+
+.page-hero p:last-child {
+    color: #c4d5ca;
+    font-size: 17px;
+    max-width: 680px;
+    margin: 0 auto;
+}
+
+
+/* ==========================================
+   10. PAGE SERVICES - DÉTAILS
+   ========================================== */
+
+.service-detail-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 75px;
+    align-items: center;
+}
+
+.service-detail-text h2 {
+    color: var(--primary);
+    font-size: clamp(30px, 4vw, 42px);
+    line-height: 1.25;
+    margin-bottom: 25px;
+}
+
+.service-detail-text > p:not(.section-subtitle) {
+    color: var(--gray);
+    margin-bottom: 25px;
+}
+
+.service-features {
+    list-style: none;
+    margin: 25px 0 35px;
+}
+
+.service-features li {
+    position: relative;
+    padding-left: 30px;
+    margin-bottom: 13px;
+    color: var(--dark);
+}
+
+.service-features li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: var(--green-dark);
+    font-weight: 800;
+}
+
+.service-detail-visual {
+    display: flex;
+    justify-content: center;
+}
+
+.service-illustration {
+    width: 100%;
+    max-width: 500px;
+    min-height: 360px;
+    padding: 45px;
+    border-radius: 18px;
+    color: var(--white);
+    background:
+        radial-gradient(
+            circle at 85% 20%,
+            #27664b,
+            transparent 45%
+        ),
+        linear-gradient(140deg, #0b2a20, #071c16);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-shadow: var(--shadow);
+}
+
+.service-illustration > span {
+    color: var(--green);
+    font-size: 13px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    margin-bottom: 35px;
+}
+
+.service-illustration h3 {
+    font-size: clamp(25px, 3vw, 35px);
+    line-height: 1.3;
+}
+
+.illustration-line {
+    width: 70px;
+    height: 4px;
+    background: var(--green);
+    margin: 30px 0 20px;
+}
+
+.service-illustration p {
+    color: #c4d5ca;
+    font-size: 13px;
+}
+
+.service-alternate {
+    background: var(--light);
+}
+
+.service-alternate .service-detail-text {
+    order: 2;
+}
+
+.service-alternate .service-detail-visual {
+    order: 1;
+}
+
+
+/* ==========================================
+   11. PROCESSUS DE TRAVAIL
+   ========================================== */
+
+.process,
+.contact-process {
+    background: var(--light);
+}
+
+.process-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 22px;
+}
+
+.process-card {
+    background: var(--white);
+    padding: 30px 25px;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    transition: transform 0.3s;
+}
+
+.process-card:hover {
+    transform: translateY(-5px);
+}
+
+.process-card > span {
+    display: inline-block;
+    font-size: 26px;
+    font-weight: 800;
+    color: var(--green-dark);
+    margin-bottom: 25px;
+}
+
+.process-card h3 {
+    color: var(--primary);
+    font-size: 19px;
+    margin-bottom: 12px;
+}
+
+.process-card p {
+    color: var(--gray);
+    font-size: 14px;
+}
+
+
+/* ==========================================
+   12. PORTFOLIO
+   ========================================== */
+
+.portfolio-intro {
+    background: var(--white);
+}
+
+.portfolio-filters {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 45px;
+}
+
+.filter-btn {
+    border: 1px solid var(--border);
+    background: var(--white);
+    color: var(--dark);
+    padding: 11px 22px;
+    border-radius: 30px;
+    font-size: 14px;
+    font-weight: 700;
+    transition: 0.3s;
+}
+
+.filter-btn:hover,
+.filter-btn.active {
+    background: var(--green-dark);
+    color: var(--white);
+    border-color: var(--green-dark);
+}
+
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 28px;
+}
+
+.portfolio-card {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 8px 30px rgba(7,28,22,0.04);
+    transition: transform 0.3s,
+                box-shadow 0.3s;
+}
+
+.portfolio-card:hover {
+    transform: translateY(-7px);
+    box-shadow: var(--shadow);
+}
+
+.portfolio-card.is-hidden {
+    display: none;
+}
+
+.portfolio-image {
+    min-height: 260px;
+    padding: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.portfolio-beaute {
+    background: linear-gradient(135deg, #32232e, #9d657f);
+}
+
+.portfolio-restaurant {
+    background: linear-gradient(135deg, #352519, #a96b32);
+}
+
+.portfolio-entreprise {
+    background: linear-gradient(135deg, #12364a, #258a9c);
+}
+
+.portfolio-preview {
+    width: 100%;
+    min-height: 190px;
+    border: 1px solid rgba(255,255,255,0.4);
+    border-radius: 10px;
+    padding: 25px;
+    color: var(--white);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    background: rgba(0,0,0,0.12);
+}
+
+.portfolio-preview span {
+    font-size: 11px;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+}
+
+.portfolio-preview h3 {
+    font-size: 24px;
+    line-height: 1.2;
+    margin-bottom: 10px;
+}
+
+.portfolio-preview p {
+    font-size: 12px;
+}
+
+.portfolio-info {
+    padding: 28px;
+}
+
+.portfolio-category {
+    color: var(--green-dark);
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+}
+
+.portfolio-info h3 {
+    color: var(--primary);
+    font-size: 23px;
+    margin: 12px 0;
+}
+
+.portfolio-info > p {
+    color: var(--gray);
+    font-size: 14px;
+    margin-bottom: 18px;
+}
+
+.portfolio-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 18px;
+}
+
+.portfolio-tags span {
+    background: var(--green-light);
+    color: var(--green-dark);
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 11px;
+    font-weight: 700;
+}
+
+.portfolio-info .portfolio-status {
+    font-size: 12px;
+    font-style: italic;
+    color: var(--gray);
+    margin-bottom: 0;
+}
+
+.portfolio-approach {
+    background: var(--light);
+}
+
+.portfolio-approach .advantage {
+    background: var(--white);
+}
+
+
+/* ==========================================
+   13. PAGE TARIFS
+   ========================================== */
+
+.pricing {
+    background: var(--light);
+}
+
+.pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    align-items: stretch;
+    gap: 25px;
+}
+
+.pricing-card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding: 38px 30px;
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 15px;
+    transition: transform 0.3s,
+                box-shadow 0.3s;
+}
+
+.pricing-card:hover {
+    transform: translateY(-7px);
+    box-shadow: var(--shadow);
+}
+
+.pricing-card.featured {
+    border: 2px solid var(--green);
+    box-shadow: var(--shadow);
+}
+
+.popular-label {
+    position: absolute;
+    top: -16px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--green);
+    color: var(--primary);
+    padding: 8px 17px;
+    border-radius: 30px;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 0.8px;
+    white-space: nowrap;
+}
+
+.plan-name {
+    color: var(--green-dark);
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.pricing-header h3 {
+    font-size: 24px;
+    color: var(--primary);
+    margin: 12px 0;
+}
+
+.pricing-header p {
+    color: var(--gray);
+    font-size: 14px;
+    min-height: 70px;
+}
+
+.pricing-price {
+    padding: 25px 0;
+    margin: 22px 0;
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+}
+
+.price {
+    display: block;
+    color: var(--primary);
+    font-size: 46px;
+    font-weight: 800;
+    line-height: 1.2;
+}
+
+.price-period {
+    color: var(--gray);
+    font-size: 13px;
+}
+
+.pricing-features {
+    list-style: none;
+    margin-bottom: 35px;
+    flex-grow: 1;
+}
+
+.pricing-features li {
+    position: relative;
+    padding-left: 26px;
+    margin-bottom: 15px;
+    font-size: 14px;
+}
+
+.pricing-features li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: var(--green-dark);
+    font-weight: 800;
+}
+
+.pricing-card .btn {
+    width: 100%;
+}
+
+.pricing-note {
+    color: var(--gray);
+    text-align: center;
+    font-size: 13px;
+    max-width: 800px;
+    margin: 35px auto 0;
+}
+
+.pricing-comparison {
+    background: var(--white);
+}
+
+
+/* ==========================================
+   14. QUESTIONS FRÉQUENTES
+   ========================================== */
+
+.faq {
+    background: var(--light);
+}
+
+.faq-list {
+    max-width: 850px;
+    margin: 0 auto;
+}
+
+.faq-item {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    margin-bottom: 15px;
+    padding: 0 25px;
+}
+
+.faq-item summary {
+    cursor: pointer;
+    color: var(--primary);
+    font-size: 16px;
+    font-weight: 700;
+    padding: 23px 0;
+}
+
+.faq-item[open] summary {
+    color: var(--green-dark);
+}
+
+.faq-item p {
+    color: var(--gray);
+    font-size: 14px;
+    padding: 0 0 25px;
+}
+
+
+/* ==========================================
+   15. PAGE CONTACT
+   ========================================== */
+
+.contact-section {
+    background: var(--white);
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: 0.9fr 1.1fr;
+    align-items: start;
+    gap: 75px;
+}
+
+.contact-info h2 {
+    color: var(--primary);
+    font-size: clamp(30px, 4vw, 42px);
+    line-height: 1.25;
+    margin-bottom: 25px;
+}
+
+.contact-description {
+    color: var(--gray);
+    margin-bottom: 35px;
+}
+
+.contact-info-list {
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+}
+
+.contact-info-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 18px;
+}
+
+.contact-icon {
+    width: 48px;
+    height: 48px;
+    flex-shrink: 0;
+    border-radius: 10px;
+    background: var(--green-light);
+    color: var(--green-dark);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 800;
+}
+
+.contact-info-item h3 {
+    color: var(--primary);
+    font-size: 17px;
+    margin-bottom: 4px;
+}
+
+.contact-info-item p {
+    color: var(--gray);
+    font-size: 14px;
+}
+
+.contact-note {
+    background: var(--green-light);
+    border-left: 4px solid var(--green);
+    border-radius: 0 10px 10px 0;
+    padding: 25px;
+    margin-top: 45px;
+}
+
+.contact-note h3 {
+    color: var(--primary);
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.contact-note p {
+    color: var(--gray);
+    font-size: 14px;
+}
+
+
+/* ==========================================
+   16. FORMULAIRE CONTACT
+   ========================================== */
+
+.contact-form-wrapper {
+    background: var(--white);
+    padding: 40px;
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    box-shadow: var(--shadow);
+}
+
+.form-heading {
+    margin-bottom: 30px;
+}
+
+.form-heading h2 {
+    color: var(--primary);
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.form-heading p {
+    color: var(--gray);
+    font-size: 14px;
+}
+
+.form-group {
+    margin-bottom: 22px;
+}
+
+.form-group label {
+    display: block;
+    color: var(--primary);
+    font-weight: 700;
+    font-size: 14px;
+    margin-bottom: 9px;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    display: block;
+    width: 100%;
+    padding: 14px 15px;
+    border: 1px solid #ccd8d0;
+    border-radius: 7px;
+    background: var(--white);
+    color: var(--dark);
+    font-size: 14px;
+    transition: border-color 0.3s,
+                box-shadow 0.3s;
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 150px;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--green-dark);
+    box-shadow: 0 0 0 3px rgba(25,195,125,0.15);
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: #87958c;
+}
+
+.form-checkbox {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    margin-bottom: 22px;
+}
+
+.form-checkbox input {
+    margin-top: 6px;
+    accent-color: var(--green-dark);
+    flex-shrink: 0;
+}
+
+.form-checkbox label {
+    color: var(--gray);
+    font-size: 13px;
+    cursor: pointer;
+}
+
+.form-notice {
+    padding: 15px;
+    background: #fff8e5;
+    color: #785600;
+    border: 1px solid #f2d991;
+    border-radius: 7px;
+    font-size: 13px;
+    margin-bottom: 25px;
+}
+
+.form-submit {
+    width: 100%;
+}
+
+.form-status {
+    margin-top: 18px;
+    font-size: 14px;
+    font-weight: 700;
+    min-height: 20px;
+}
+
+.form-status.success {
+    color: var(--green-dark);
+}
+
+.form-status.error {
+    color: #b42318;
+}
+
+
+/* ==========================================
+   17. APPEL À L'ACTION
+   ========================================== */
+
+.cta {
+    background:
+        radial-gradient(
+            circle at 85% 20%,
+            #174c39,
+            transparent 35%
+        ),
+        var(--primary);
+    text-align: center;
+    color: var(--white);
+}
+
+.cta-content {
+    max-width: 780px;
+}
+
+.cta .section-subtitle {
+    color: var(--green);
+}
+
+.cta h2 {
+    color: var(--white);
+    font-size: clamp(30px, 4vw, 43px);
+    line-height: 1.3;
+    margin-bottom: 20px;
+}
+
+.cta p:not(.section-subtitle) {
+    color: #c4d5ca;
+    margin-bottom: 30px;
+}
+
+
+/* ==========================================
+   18. PIED DE PAGE
+   ========================================== */
+
+.footer {
+    background: #04120e;
+    color: var(--white);
+    padding-top: 70px;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr;
+    gap: 50px;
+    padding-bottom: 55px;
+}
+
+.footer-brand p {
+    color: #a7b8ad;
+    margin-top: 15px;
+    font-size: 14px;
+}
+
+.footer h3 {
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+
+.footer-links,
+.footer-contact {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.footer-links a,
+.footer-contact p,
+.footer-contact a {
+    color: #a7b8ad;
+    font-size: 14px;
+}
+
+.footer-links a:hover,
+.footer-contact a:hover {
+    color: var(--green);
+}
+
+.footer-bottom {
+    border-top: 1px solid #20352a;
+    padding: 22px;
+    text-align: center;
+    color: #a7b8ad;
+    font-size: 13px;
+}
+
+
+/* ==========================================
+   19. RESPONSIVE - TABLETTES
+   ========================================== */
+
+@media (max-width: 1000px) {
+
+    .hero-content {
+        grid-template-columns: 1fr;
+        gap: 50px;
+    }
+
+    .hero-visual {
+        justify-content: flex-start;
+    }
+
+    .service-grid,
+    .portfolio-grid,
+    .pricing-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .process-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .service-detail-grid,
+    .contact-grid {
+        gap: 40px;
+    }
+
+    .footer-content {
+        gap: 30px;
+    }
+}
+
+
+/* ==========================================
+   20. RESPONSIVE - MENU MOBILE
+   ========================================== */
+
+@media (max-width: 800px) {
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-menu {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: var(--primary);
+        padding: 25px 5%;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 20px;
+        box-shadow: 0 15px 25px rgba(0,0,0,0.15);
+    }
+
+    .nav-menu.active {
+        display: flex;
+    }
+
+    .nav-menu .nav-contact {
+        text-align: center;
+    }
+
+    .about-content,
+    .service-detail-grid,
+    .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .service-alternate .service-detail-text,
+    .service-alternate .service-detail-visual {
+        order: initial;
+    }
+
+    .advantages-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .footer-content {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .section-padding {
+        padding: 80px 0;
+    }
+}
+
+
+/* ==========================================
+   21. RESPONSIVE - TÉLÉPHONES
+   ========================================== */
+
+@media (max-width: 600px) {
+
+    .container {
+        width: 90%;
+    }
+
+    .header {
+        padding: 15px 0;
+    }
+
+    .logo {
+        font-size: 21px;
+    }
+
+    .section-padding {
+        padding: 65px 0;
+    }
+
+    .hero {
+        min-height: auto;
+        padding: 75px 0;
+    }
+
+    .hero h1 {
+        font-size: 38px;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+    }
+
+    .hero-buttons .btn {
+        width: 100%;
+    }
+
+    .visual-card {
+        padding: 27px;
+        min-height: 280px;
+    }
+
+    .visual-card h2 {
+        font-size: 24px;
+    }
+
+    .page-hero {
+        padding: 75px 0;
+    }
+
+    .page-hero h1 {
+        font-size: 37px;
+    }
+
+    .page-hero p:last-child {
+        font-size: 15px;
+    }
+
+    .service-grid,
+    .portfolio-grid,
+    .pricing-grid,
+    .advantages-grid,
+    .process-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .service-illustration {
+        padding: 30px;
+        min-height: 290px;
+    }
+
+    .service-illustration h3 {
+        font-size: 27px;
+    }
+
+    .section-heading {
+        margin-bottom: 40px;
+    }
+
+    .section-heading h2,
+    .about h2,
+    .contact-info h2 {
+        font-size: 31px;
+    }
+
+    .pricing-card {
+        padding: 35px 25px;
+    }
+
+    .pricing-header p {
+        min-height: auto;
+    }
+
+    .contact-form-wrapper {
+        padding: 25px 20px;
+    }
+
+    .portfolio-image {
+        min-height: 230px;
+    }
+
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+
+    .cta h2 {
+        font-size: 31px;
+    }
+}
+
+
+/* ==========================================
+   22. ACCESSIBILITÉ ET ANIMATIONS
+   ========================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+/* =====================================
+   LIENS DE CONTACT Nova Web Impact
+===================================== */
+
+.contact-info-item a {
+    color: var(--green-dark);
+    font-size: 14px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.contact-info-item a:hover {
+    color: var(--primary);
+    text-decoration: underline;
+}
+
+.contact-info-item a:focus-visible {
+    outline: 2px solid var(--green);
+    outline-offset: 4px;
+}
+
+@media (max-width: 600px) {
+
+    .contact-info-item a {
+        overflow-wrap: anywhere;
+    }
+
+}
+
+/* ===== Icônes de contact Nova Web Impact ===== */
+.contact-icon img {
+    display: block;
+    width: 28px;
+    height: 28px;
+    object-fit: contain;
+}
+.footer-contact a,
+.footer-contact .footer-location {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    line-height: 1.5;
+    overflow-wrap: anywhere;
+}
+.footer-contact img {
+    display: block;
+    flex: 0 0 19px;
+    width: 19px;
+    height: 19px;
+}
+.footer-contact a:focus-visible {
+    outline: 2px solid var(--green);
+    outline-offset: 4px;
+    border-radius: 3px;
+}
+
+/* Nom complet de la marque sur petits écrans */
+@media (max-width: 480px) {
+  .logo { font-size: 16px; letter-spacing: 0; }
+}

@@ -1,0 +1,380 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Découvrez les projets de démonstration et les concepts de sites web de Nova Web Impact.">
+
+    <title>Nos réalisations | Nova Web Impact</title>
+
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+
+    <!-- EN-TÊTE -->
+    <header class="header">
+        <div class="container navbar">
+
+            <a href="index.html" class="logo">
+                NOVA WEB <span>IMPACT</span>
+            </a>
+
+            <button class="menu-toggle" id="menu-toggle"
+                    type="button"
+                    aria-label="Ouvrir le menu"
+                    aria-controls="nav-menu"
+                    aria-expanded="false">
+                ☰
+            </button>
+
+            <nav class="nav-menu" id="nav-menu"
+                 aria-label="Navigation principale">
+
+                <a href="index.html">Accueil</a>
+                <a href="services.html">Services</a>
+                <a href="realisations.html" class="active"
+                   aria-current="page">Réalisations</a>
+                <a href="tarifs.html">Tarifs</a>
+                <a href="contact.html" class="nav-contact">
+                    Contact
+                </a>
+
+            </nav>
+        </div>
+    </header>
+
+    <main>
+
+        <!-- INTRODUCTION -->
+        <section class="page-hero">
+            <div class="container">
+
+                <p class="section-subtitle">
+                    NOTRE PORTFOLIO
+                </p>
+
+                <h1>
+                    Des idées qui prennent
+                    <span>vie sur le web.</span>
+                </h1>
+
+                <p>
+                    Découvrez nos concepts de sites web
+                    imaginés pour différents secteurs
+                    d'activité.
+                </p>
+
+            </div>
+        </section>
+
+        <!-- PRÉSENTATION DU PORTFOLIO -->
+        <section class="portfolio-intro section-padding">
+            <div class="container">
+
+                <div class="section-heading">
+                    <p class="section-subtitle">
+                        NOS CONCEPTS
+                    </p>
+
+                    <h2>Découvrez nos projets</h2>
+
+                    <p>
+                        Ces projets sont des concepts fictifs
+                        destinés à illustrer les styles et
+                        fonctionnalités que nous pouvons proposer.
+                        Ils ne représentent pas des commandes
+                        réalisées pour de vrais clients.
+                    </p>
+                </div>
+
+                <!-- FILTRES -->
+                <div class="portfolio-filters"
+                     aria-label="Filtrer les projets">
+
+                    <button type="button"
+                            class="filter-btn active"
+                            data-filter="all"
+                            aria-pressed="true">
+                        Tous les projets
+                    </button>
+
+                    <button type="button"
+                            class="filter-btn"
+                            data-filter="beaute"
+                            aria-pressed="false">
+                        Beauté
+                    </button>
+
+                    <button type="button"
+                            class="filter-btn"
+                            data-filter="restaurant"
+                            aria-pressed="false">
+                        Restaurant
+                    </button>
+
+                    <button type="button"
+                            class="filter-btn"
+                            data-filter="entreprise"
+                            aria-pressed="false">
+                        Entreprise
+                    </button>
+
+                </div>
+
+                <!-- GRILLE DES PROJETS -->
+                <div class="portfolio-grid">
+
+                    <!-- PROJET 1 -->
+                    <article class="portfolio-card"
+                             data-category="beaute">
+
+                        <div class="portfolio-image portfolio-beaute">
+                            <div class="portfolio-preview">
+                                <span>CONCEPT 01</span>
+                                <h3>ÉLÉGANCE STUDIO</h3>
+                                <p>Coiffure · Beauté · Style</p>
+                            </div>
+                        </div>
+
+                        <div class="portfolio-info">
+
+                            <span class="portfolio-category">
+                                SALON DE COIFFURE
+                            </span>
+
+                            <h3>Élégance Studio</h3>
+
+                            <p>
+                                Concept de site vitrine pour un salon
+                                de coiffure moderne, avec une présentation
+                                des prestations et un espace dédié
+                                aux demandes de rendez-vous.
+                            </p>
+
+                            <div class="portfolio-tags">
+                                <span>Site vitrine</span>
+                                <span>Responsive</span>
+                                <span>Design</span>
+                            </div>
+
+                            <p class="portfolio-status">
+                                Projet fictif de démonstration
+                            </p>
+
+                        </div>
+                    </article>
+
+                    <!-- PROJET 2 -->
+                    <article class="portfolio-card"
+                             data-category="restaurant">
+
+                        <div class="portfolio-image portfolio-restaurant">
+                            <div class="portfolio-preview">
+                                <span>CONCEPT 02</span>
+                                <h3>LE BON GOÛT</h3>
+                                <p>Cuisine · Saveurs · Découverte</p>
+                            </div>
+                        </div>
+
+                        <div class="portfolio-info">
+
+                            <span class="portfolio-category">
+                                RESTAURATION
+                            </span>
+
+                            <h3>Le Bon Goût</h3>
+
+                            <p>
+                                Concept de site pour un restaurant,
+                                avec présentation du menu, des
+                                spécialités, des horaires et
+                                des informations de contact.
+                            </p>
+
+                            <div class="portfolio-tags">
+                                <span>Restaurant</span>
+                                <span>Menu</span>
+                                <span>Responsive</span>
+                            </div>
+
+                            <p class="portfolio-status">
+                                Projet fictif de démonstration
+                            </p>
+
+                        </div>
+                    </article>
+
+                    <!-- PROJET 3 -->
+                    <article class="portfolio-card"
+                             data-category="entreprise">
+
+                        <div class="portfolio-image portfolio-entreprise">
+                            <div class="portfolio-preview">
+                                <span>CONCEPT 03</span>
+                                <h3>PURE CLEAN</h3>
+                                <p>Propreté · Confiance · Service</p>
+                            </div>
+                        </div>
+
+                        <div class="portfolio-info">
+
+                            <span class="portfolio-category">
+                                SERVICES AUX ENTREPRISES
+                            </span>
+
+                            <h3>Pure Clean</h3>
+
+                            <p>
+                                Concept de site professionnel pour
+                                une entreprise de nettoyage, avec
+                                une présentation des services et
+                                une invitation à demander un devis.
+                            </p>
+
+                            <div class="portfolio-tags">
+                                <span>Entreprise</span>
+                                <span>Services</span>
+                                <span>Devis</span>
+                            </div>
+
+                            <p class="portfolio-status">
+                                Projet fictif de démonstration
+                            </p>
+
+                        </div>
+                    </article>
+
+                </div>
+
+            </div>
+        </section>
+
+        <!-- NOTRE APPROCHE -->
+        <section class="portfolio-approach section-padding">
+            <div class="container">
+
+                <div class="section-heading">
+                    <p class="section-subtitle">
+                        NOTRE VISION
+                    </p>
+
+                    <h2>Chaque entreprise est unique</h2>
+
+                    <p>
+                        Nous adaptons la conception de chaque site
+                        à l'identité, au secteur d'activité
+                        et aux objectifs du projet.
+                    </p>
+                </div>
+
+                <div class="advantages-grid">
+
+                    <article class="advantage">
+                        <h3>Identité visuelle</h3>
+                        <p>
+                            Un design cohérent avec l'image
+                            et les valeurs de votre entreprise.
+                        </p>
+                    </article>
+
+                    <article class="advantage">
+                        <h3>Expérience utilisateur</h3>
+                        <p>
+                            Une navigation claire pour permettre
+                            aux visiteurs de trouver facilement
+                            les informations recherchées.
+                        </p>
+                    </article>
+
+                    <article class="advantage">
+                        <h3>Adaptabilité</h3>
+                        <p>
+                            Une présentation pensée pour les
+                            ordinateurs, les tablettes et
+                            les téléphones.
+                        </p>
+                    </article>
+
+                </div>
+
+            </div>
+        </section>
+
+        <!-- APPEL À L'ACTION -->
+        <section class="cta section-padding">
+            <div class="container cta-content">
+
+                <p class="section-subtitle">
+                    VOTRE PROJET
+                </p>
+
+                <h2>
+                    Et si votre entreprise était
+                    notre prochain projet ?
+                </h2>
+
+                <p>
+                    Parlons de vos idées et construisons
+                    une présence web qui correspond
+                    à votre activité.
+                </p>
+
+                <a href="contact.html" class="btn btn-primary">
+                    Présenter mon projet
+                </a>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- PIED DE PAGE -->
+    <footer class="footer">
+
+        <div class="container footer-content">
+
+            <div class="footer-brand">
+                <a href="index.html" class="logo">
+                    NOVA WEB <span>IMPACT</span>
+                </a>
+
+                <p>
+                    Votre présence digitale. Notre expertise.
+                </p>
+            </div>
+
+            <div class="footer-links">
+                <h3>Navigation</h3>
+                <a href="index.html">Accueil</a>
+                <a href="services.html">Services</a>
+                <a href="realisations.html">Réalisations</a>
+                <a href="tarifs.html">Tarifs</a>
+                <a href="contact.html">Contact</a>
+            </div>
+
+            <div class="footer-contact">
+                <h3>Contact</h3>
+                <p class="footer-location"><img src="images/map-pin.svg" alt="" aria-hidden="true" width="19" height="19"> La Pocatière, Québec, Canada</p>
+                <a href="tel:+15814467717"><img src="images/phone.svg" alt="" aria-hidden="true" width="19" height="19"> +1 581 446 7717</a>
+                <a href="https://wa.me/15814467717" target="_blank" rel="noopener noreferrer"><img src="images/whatsapp.svg" alt="" aria-hidden="true" width="19" height="19"> WhatsApp</a>
+                <a href="mailto:web.impact2026@gmail.com"><img src="images/mail.svg" alt="" aria-hidden="true" width="19" height="19"> web.impact2026@gmail.com</a>
+                <a href="https://www.facebook.com/share/1A4qJ84CLX/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer"><img src="images/facebook.svg" alt="" aria-hidden="true" width="19" height="19"> Facebook : Nova Web Impact</a>
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+            <p>
+                © <span id="current-year">2026</span>
+                Nova Web Impact. Tous droits réservés.
+            </p>
+        </div>
+
+    </footer>
+
+</body>
+</html>
